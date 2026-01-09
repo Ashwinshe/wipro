@@ -1,1 +1,125 @@
+// See https://aka.ms/new-console-template for more information
+// // See https://aka.ms/new-console-template for more information
 
+// using System.Runtime.InteropServices.Marshalling;
+// using System.Threading.Tasks.Dataflow;
+
+// // int[] num = new int[5];
+// // num[0] = 10;
+// // num[1] = 20;
+// // num[2] = 30;
+// // num[3] = 40;
+// // num[4] = 50;
+// // for(int i = 0; i < num.Length; i++)
+// // {
+// //     Console.WriteLine("i :" + num[i]);
+// // }
+// int[] num = {10, 20, 30, 40, 50};
+// Array.Sort(num);
+// Array.Reverse(num);
+// Array.IndexOf(num, 30);
+// Array.MaxLength;
+// String[] str = {"black", "red", "white"};
+// for(int i = 0; i < str.Length; i++)
+// {
+//     Console.WriteLine($"string at index {j} is{str[i]}");
+// }
+// str.Length;
+
+// // 2D array
+// int[,] mat = new int[3, 3];
+// int[,] mat = {
+//     {1, 2, 3},
+//     {4, 5, 6},
+//     {7, 8, 9}
+// };
+
+// for(int i = 0; i < 3; i++)
+// {
+//     for(int j = 0; j < 3; j++)
+//     {
+//         Console.WriteLine(mat[i][j] + " ");
+//     }
+// }
+
+// int[][] jaggedArray = new int[3][];
+// jaggedArray[0] = new int[] {1, 2};
+// jaggedArray[1] = new int[] {3, 4, 5};
+// jaggedArray[2] = new int[] {6, 7, 8, 9};
+
+// for(int i = 0; i < jaggedArray.Length; i++)
+// {
+//     for(int j = 0; j < jaggedArray[i].Length; j++)
+//     {
+//         Console.WriteLine(jaggedArray[i][j] + " ");
+//     }
+// }
+// none genric order management system
+
+// Console.WriteLine("Non Generic Collection Impl");
+// ArrayList ordercoll = new ArrayList();
+// ordercoll.Add("laptop");
+// ordercoll.Add(12345);
+// ordercoll.Add(99.99);
+// ordercoll.Add(new DateTime(2024, 6, 1));
+
+// foreach(var item in ordercoll)
+// {
+//     Console.WriteLine(item);
+// }
+
+// // string List
+// List<String> str  =new List<String>();
+// str.Add('LATPTOP');
+// str.Add("12");
+// str.Add(1.ToString());
+
+List<Order> orderList = new List<Order>();
+
+//Adding some sample orders to the collection
+orderList.Add(new Order { OrderId = 1, ProductName = "Laptop", Quantity = 2, Price = 1500.00 });
+orderList.Add(new Order { OrderId = 2, ProductName = "Mobile", Quantity = 5, Price = 800.00 });
+
+//displaying the orders in the collection
+Console.WriteLine("Orders in the Order Collection:");
+foreach (var order in orderList)
+{
+    Console.WriteLine(order);
+}
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Order> orderList = new List<Order>();
+
+            orderList.Add(new Order
+            {
+                OrderId = 1,
+                ProductName = "Laptop",
+                Quantity = 2,
+                Price = 1500
+            });
+
+            orderList.Add(new Order
+            {
+                OrderId = 2,
+                ProductName = "Mobile",
+                Quantity = 5,
+                Price = 800
+            });
+
+            Console.WriteLine("Orders in the Order Collection:");
+            foreach (var order in orderList)
+            {
+                Console.WriteLine(order);
+            }
+
+            Console.ReadLine(); 
+        }
+    }
+}
